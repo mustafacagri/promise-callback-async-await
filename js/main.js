@@ -50,3 +50,10 @@ const createTheRow = obj => {
     cell.innerHTML = obj[key] // we fill the cell here with the user's element
   }
 }
+
+const userListGenerator = () => {
+  // this function will fill the table with the users data
+  users.forEach(user => {
+    createTheRow(user) // we send the user data to this function to populate the user data in the table
+  })
+}

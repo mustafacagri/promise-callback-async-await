@@ -4,13 +4,6 @@ const newUser = (user, callback) => {
   }, 2500) // we use setTimeout here to simulate as a retrieving the data from a real rest api
 }
 
-const userListGenerator = () => {
-  // this function will fill the table with the users data
-  users.forEach(user => {
-    createTheRow(user) // we send the user data to this function to populate the user data in the table
-  })
-}
-
 newUser(
   newUserObject, // this comes from the main.js
   userListGenerator // here is the our callback function, we only need to send the name of function without any brackets

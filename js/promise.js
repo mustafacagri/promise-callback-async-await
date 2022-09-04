@@ -11,13 +11,6 @@ const newUser = user => {
   })
 }
 
-const userListGenerator = () => {
-  // this function will fill the table with the users data
-  users.forEach(user => {
-    createTheRow(user) // we send the user data to this function to populate the user data in the table
-  })
-}
-
 newUser(newUserObject) // the newUserObject comes from the main.js
   .then(response => userListGenerator()) // if the resolve returns, we are gonna execute this function
   .catch(e => {
