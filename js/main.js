@@ -31,6 +31,14 @@ const users = [
   }
 ] // here is the dummy data
 
+const newUserObject = {
+  id: 5,
+  firstName: 'Mustafa Çağrı',
+  lastName: 'Güven',
+  email: 'me@mustafacagri.com',
+  gender: 'Male'
+} // here is the dummy new user data to use it in everywhere
+
 const tbody = document.getElementById('userList').getElementsByTagName('tbody')[0] // get the tbody of the userList table
 
 const createTheRow = obj => {

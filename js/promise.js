@@ -18,13 +18,7 @@ const userListGenerator = () => {
   })
 }
 
-newUser({
-  id: 5,
-  firstName: 'Mustafa Çağrı',
-  lastName: 'Güven',
-  email: 'me@mustafacagri.com',
-  gender: 'Male'
-})
+newUser(newUserObject) // the newUserObject comes from the main.js
   .then(response => userListGenerator()) // if the resolve returns, we are gonna execute this function
   .catch(e => {
     alert(e) // the e value comes from the reject part. ==> 'There is an issue...'. Also you can pass any object, array etc...

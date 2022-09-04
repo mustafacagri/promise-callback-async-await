@@ -12,13 +12,7 @@ const userListGenerator = () => {
 }
 
 newUser(
-  {
-    id: 5,
-    firstName: 'Mustafa Çağrı',
-    lastName: 'Güven',
-    email: 'me@mustafacagri.com',
-    gender: 'Male'
-  },
+  newUserObject, // this comes from the main.js
   userListGenerator // here is the our callback function, we only need to send the name of function without any brackets
 )
 
