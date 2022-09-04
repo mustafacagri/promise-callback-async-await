@@ -1,0 +1,13 @@
+table {
+  width: 50%;
+  margin: 5% 25% auto;
+}
+
+table thead {
+  font-weight: bold;
+  background-color: #fafafa;
+}
+
+table td {
+  padding: 10px 20px;
+}
