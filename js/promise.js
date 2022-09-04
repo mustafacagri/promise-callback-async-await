@@ -18,3 +18,5 @@ newUser(newUserObject) // the newUserObject comes from the main.js
   })
 
 // the main idea is we firstly want to add a new user then populate the table. if the adding new user part works correctly, then we will show the table, if not the reject part will be executed
+
+// a real world example: you are adding a user to a db via rest api, if it works correctly, you are gonna add this user to the store (vuex, redux etc...), however if it does not work correctly, you are not gonna add it to the store. here you need to use promise, not a callback function.
