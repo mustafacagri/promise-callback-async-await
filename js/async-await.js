@@ -15,19 +15,3 @@ const fetchAPI = async () => {
 fetchAPI() // the main execution function
 
 // this approach is not the best usage becauase, js is not a C# or any other backend technologies. and this makes the js is more faster than the others. all works can be handled in the parallel time and we do not need to wait the next job to be handled.
-
-function addTheUser(user) {
-  console.log(user)
-  // this function is not important for our example. we use this to retrieve the data from the rest api in the correct form
-  try {
-    if (user) {
-      const { id, name, email, gender = 'Male' } = user
-      const fullName = name.split(' ')
-      const firstName = fullName[0]
-      const lastName = fullName[1]
-      users.push({ id, firstName, lastName, email, gender })
-    }
-  } catch (error) {
-    console.log(error.message)
-  }
-}

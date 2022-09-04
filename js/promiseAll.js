@@ -7,18 +7,3 @@ Promise.all([axios(apiURL + ids[0]), axios(apiURL + ids[1]), axios(apiURL + ids[
     response.forEach(res => addTheUser(res.data)) // the response has an array of responses for all promises
   })
   .then(_res => userListGenerator()) // we need to use at least a variable for response. for this example, we will not use the response, that's why I use it a prefix '_'. if all of our promises work correctly, then we are gonna add the results to our table
-
-function addTheUser(user) {
-  // this function is not important for our example. we use this to retrieve the data from the rest api in the correct form
-  try {
-    if (user) {
-      const { id, name, email, gender = 'Male' } = user
-      const fullName = name.split(' ')
-      const firstName = fullName[0]
-      const lastName = fullName[1]
-      users.push({ id, firstName, lastName, email, gender })
-    }
-  } catch (error) {
-    console.log(error.message)
-  }
-}
